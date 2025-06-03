@@ -1,0 +1,19 @@
+# Node dependencies
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output (if you ever use a build tool)
+dist/
+build/
+
+# Environment variables / secrets
+.env
+
+# Optional: Ignore TypeScript build output
+*.tsbuildinfo
