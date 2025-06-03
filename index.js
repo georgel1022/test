@@ -1,9 +1,19 @@
+// Load environment variables from .env file
+require('dotenv').config();
+
 const { createClient, LiveTranscriptionEvents } = require("@deepgram/sdk");
 const fetch = require("cross-fetch");
 
 const live = async () => {
-  // The API key you created in step 1
-  const deepgramApiKey = "61decf6ffdf33e0fee296ef3841e39350bab956f";
+  // Get the API key from environment variables
+  const deepgramApiKey = process.env.DEEPGRAM_API_KEY;
+  
+  // Check if API key exists
+  if (!deepgramApiKey) {
+    console.error("Error: DEEPGRAM_API_KEY not found in environment variables");
+    console.error("Please make sure you have created a .env file with your API key");
+    return;
+  }
 
   // URL for the real-time streaming audio you would like to transcribe
   const url = "http://stream.live.vc.bbcmedia.co.uk/bbc_world_service";

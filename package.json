@@ -11,6 +11,7 @@
   "description": "",
   "dependencies": {
     "@deepgram/sdk": "^4.2.0",
-    "cross-fetch": "^4.1.0"
+    "cross-fetch": "^4.1.0",
+    "dotenv": "^16.5.0"
   }
 }
